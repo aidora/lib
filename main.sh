@@ -22,11 +22,11 @@ fi
 #--------------------------------------------------------------------------------------------------------------------------------
 # Get your PGP key signing password  								            
 #--------------------------------------------------------------------------------------------------------------------------------
-if [ "$GPGPASS" == "" ]; then
-GPGPASS=$(whiptail --passwordbox "\nPlease enter your GPG signing password or leave blank for none. \n\nEnd users - ignore - leave blank. " 14 50 --title "Package signing" 3>&1 1>&2 2>&3)    
-exitstatus=$?
-if [ $exitstatus != 0 ]; then exit; fi
-fi
+# if [ "$GPGPASS" == "" ]; then
+# GPGPASS=$(whiptail --passwordbox "\nPlease enter your GPG signing password or leave blank for none. \n\nEnd users - ignore - leave blank. " 14 50 --title "Package signing" 3>&1 1>&2 2>&3)    
+# exitstatus=$?
+# if [ $exitstatus != 0 ]; then exit; fi
+# fi
 
 #--------------------------------------------------------------------------------------------------------------------------------
 # Choose for which board you want to compile  								            
