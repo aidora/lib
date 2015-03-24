@@ -502,8 +502,9 @@ echo $TZDATA > $DEST/output/sdcard/etc/timezone
 chroot $DEST/output/sdcard /bin/bash -c "dpkg-reconfigure -f noninteractive tzdata"
 
 # set root password and force password change upon first login
-chroot $DEST/output/sdcard /bin/bash -c "(echo $ROOTPWD;echo $ROOTPWD;) | passwd root"  
-chroot $DEST/output/sdcard /bin/bash -c "chage -d 0 root" 
+chroot $DEST/output/sdcard /bin/bash -c "(echo $ROOTPWD;echo $ROOTPWD;) | passwd root"
+#-- Password not expire
+# chroot $DEST/output/sdcard /bin/bash -c "chage -d 0 root" 
 
 # change default I/O scheduler, noop for flash media, deadline for SSD, cfq for mechanical drive
 cat <<EOT >> $DEST/output/sdcard/etc/sysfs.conf
