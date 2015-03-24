@@ -105,6 +105,8 @@ cubietruck)
 # Cubieboard
 #--------------------------------------------------------------------------------------------------------------------------------
 REVISION="3.4"
+#-- Point to Aidora Linux
+LINUXKERNEL="https://github.com/aidora/linux"
 BOOTCONFIG="Cubietruck_config" 
 MODULES="hci_uart gpio_sunxi bt_gpio wifi_gpio rfcomm hidp sunxi-ir bonding spi_sun7i bcmdhd"
 MODULES_NEXT="brcmfmac"
